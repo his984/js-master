@@ -1,34 +1,41 @@
-const arr = ["a", "b", "c", "d"];
-const zrr = ["e", "f", "g", "h", "i"];
-const numbers = [2, 4, 6, 8, 10];
+"use strict";
 
-// Spread operator
-console.log(...numbers);
+const cla = ["a", "b", "c"];
+const weekdays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+const obj = {
+  name: "John",
+  age: 30,
+  // cla: cla,
+  // es6 enhanced object literals syntax
+  cla,
+  // method
+  greet() {
+    console.log("Hello");
+  },
+  // Computed property names
+  [weekdays[3]]: "Thursday",
+  // Short hand syntax
+  weekdays, // weekdays: weekdays
+};
+console.log(obj);
+// Optional chaining operator (?.)
 
-// Full example for destructuring
-const [first, second, ...rest] = arr;
-console.log(first, second, rest);
+const obj2 = {
+  name: "John",
+  age: 30,
+  cla: cla,
+  greet() {
+    console.log("Hello");
+  },
+  weekdays: weekdays,
+  address: {
+    street: "123 Main St",
+    city: "New York",
+    country: "USA",
+  },
+};
+console.log(obj2.address?.country);
 
-// Spread operator
-const total = [...arr, ...zrr];
-console.log(total);
 
-// for loop
-for (let i = 0; i < numbers.length; i++) {
-  console.log(numbers[i] + 2);
-}
-// for of
-for (const number of numbers) {
-  console.log(number + 2);
-}
-// for of with entries
-
-for (const number of numbers.entries()) {
-  console.log(`${number[0] + 1}: ${number[1]}`);
-}
-// for of with destructuring
-for (const [i, element] of numbers.entries()) {
-  console.log(`${i + 1}: ${element}`);
-}
 
 
