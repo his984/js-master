@@ -1,22 +1,24 @@
 "use strict";
 
-const bookings = [];
-const createBooking = function (
-  flightNum,
-  numPassengers = 1,
-  price = 199 * numPassengers
-) {
-  // ES5
-  // numPassengers = numPassengers || 1; // default value
-  // price = price || 199; // default value
-
-  const booking = {
-    flightNum,
-    numPassengers,
-    price,
-  };
-  console.log(booking);
-  bookings.push(booking);
+// How Passing Arguments Works: Value vs. Reference
+const flight = "LH234";
+const jonas = {
+  name: "Jonas Schmedtmann",
+  passport: 24739479284,
 };
-createBooking("LH123", 3, 999);
-createBooking("LH123", 2);
+
+
+const checkIn = function (flightNum, passenger) {
+  flightNum = "LH999";
+  passenger.name = "Mr. " + passenger.name;
+
+  if (passenger.passport === 24739479284) {
+    alert("Checked in");
+  } else {
+    alert("Wrong passport!");
+  }
+}
+
+checkIn(flight, jonas);
+console.log(flight);
+console.log(jonas);
