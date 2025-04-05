@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* NAV */
+nav {
+  background-color: antiquewhite;
+  padding: 10px;
+}
+/* FORM */
+.login {
+  background-color: rgb(230, 209, 209);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+/* Input */
+input {
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 2px;
+  border: none;
+}
+/* BUTTON */
+button {
+  padding: 5px 10px;
+  font-weight: bold;
+}
+/* BALANCE */
+.balance {
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+.balance_label {
+  /* background-color: green; */
+  margin-bottom: 10px;
+}
+/* MOVEMENTS */
+.movements {
+  background-color: rgb(230, 209, 209);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+/* movements_row */
+.movements_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: white;
+  border-radius: 6px;
+}
+.movements_details {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+/* MOVEMENT TYPE */
+.movements__type {
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+.deposit {
+  background-color: green;
+}
+.withdraw {
+  background-color: red;
+}
