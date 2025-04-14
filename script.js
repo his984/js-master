@@ -37,6 +37,7 @@ const containerMovements = document.querySelector(".movements");
 // DisplayMovements
 
 const displayMovements = function (movements) {
+  // Clear the container before displaying new movements
   containerMovements.innerHTML = "";
   movements.forEach(function (mov, i) {
     // Creating a row for each movement
@@ -61,3 +62,23 @@ const displayMovements = function (movements) {
 };
 
 displayMovements(account1.movements);
+
+// EUR to USD
+const eurToUsd = 1.1;
+const test = account1.movements.map(function (x) {
+  return `${Math.trunc(x * eurToUsd)}$`;
+});
+console.log(test);
+
+// The following code creates a username for each account by taking the first letter of each word in the owner's name, converting it to lowercase, and joining them together.
+const createUsername = function (accs) {
+  accs.forEach(function (acc) {
+    acc.username = acc.owner
+      .toLowerCase()
+      .split(" ")
+      .map((name) => name[0])
+      .join("");
+  });
+};
+console.log(createUsername(accounts));
+console.log(accounts);
