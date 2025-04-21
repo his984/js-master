@@ -7,35 +7,28 @@ const account1 = {
   interestRate: 1.2, // %
   pin: 1111,
 };
-
 const account2 = {
   owner: "Jessica Davis",
   movements: [5000, 3400, -150, -790, -3210, -1000, 8500, -30],
   interestRate: 1.5,
   pin: 2222,
 };
-
 const account3 = {
   owner: "Steven Thomas Williams",
   movements: [200, -200, 340, -300, -20, 50, 400, -460],
   interestRate: 0.7,
   pin: 3333,
 };
-
 const account4 = {
   owner: "Sarah Smith",
   movements: [430, 1000, 700, 50, 90],
   interestRate: 1,
   pin: 4444,
 };
-
 const accounts = [account1, account2, account3, account4];
-
 // ELEMENTS
 const containerMovements = document.querySelector(".movements");
-
 // DisplayMovements
-
 const displayMovements = function (movements) {
   // Clear the container before displaying new movements
   containerMovements.innerHTML = "";
@@ -60,25 +53,18 @@ const displayMovements = function (movements) {
     containerMovements.insertAdjacentHTML("afterbegin", html);
   });
 };
-
 displayMovements(account1.movements);
 
-// EUR to USD
-const eurToUsd = 1.1;
-const test = account1.movements.map(function (x) {
-  return `${Math.trunc(x * eurToUsd)}$`;
-});
-console.log(test);
+// Computing usernames
 
-// The following code creates a username for each account by taking the first letter of each word in the owner's name, converting it to lowercase, and joining them together.
-const createUsername = function (accs) {
+const createUserNames = function (accs) {
   accs.forEach(function (acc) {
-    acc.username = acc.owner
+    acc.userName = acc.owner
       .toLowerCase()
       .split(" ")
       .map((name) => name[0])
       .join("");
   });
 };
-console.log(createUsername(accounts));
+console.log(createUserNames(accounts));
 console.log(accounts);
