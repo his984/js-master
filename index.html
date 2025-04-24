@@ -10,38 +10,52 @@
 </head>
 
 <body>
-  <!-- NAV -->
-  <nav>
-    <h1>Log in ti get started</h1>
+  <div class="header">
+    <h1 class="welcome">Log in to get started</h1>
     <form action="" class="login">
-      <input type="text" placeholder="user">
-      <input type="text" placeholder="PIN" maxlength="4">
-      <button>GO!</button>
+      <input class="inputUser" type="text" placeholder="user">
+      <input class="inputPin" type="text" placeholder="PIN" maxlength="4">
+      <button class="loginBtn">GO!</button>
     </form>
-  </nav>
-  <!-- MAIN -->
-  <main class="app">
-    <!-- BALANCE -->
-    <div class="balance">
-      <div>
-        <h2 class="balance_label">Current balance</h2>
-        <p class="balance_date">As of:
-          <span class="date">2025-01-01 - 00:00</span>
-        </p>
-      </div>
-      <p class="balance_value">123</p>
-    </div>
-    <!-- MOVEMENTS -->
-    <div class="movements">
-      <div class="movements_row">
-        <div class="movements_details">
-          <div class="movements_type">test</div>
-          <div class="movements_date">2025-01-01 - 00:00</div>
+  </div>
+
+  <div class="content">
+    <!-- NAV -->
+    <nav>
+    </nav>
+    <!-- MAIN -->
+    <main class="app">
+      <!-- BALANCE -->
+      <div class="balance">
+        <div>
+          <h2 class="balance_label">Current balance</h2>
+          <p class="balance_Start at">As of:
+            <span class="Start at">2025-01-01 - 00:00</span>
+          </p>
         </div>
-        <div class="movements_value">TEST</div>
+        <p class="balance_value">123</p>
       </div>
-    </div>
-  </main>
+      <!-- MOVEMENTS -->
+      <div class="movements">
+        <div class="movements_row">
+          <div class="movements_details">
+            <div class="movements_type"></div>
+            <div class="movements_Start at">2025-01-01 - 00:00</div>
+          </div>
+          <div class="movements_value">TEST</div>
+        </div>
+      </div>
+      <!-- SUMMARY -->
+      <div class="summary">
+        <p class="summary__label">In</p>
+        <p class="summary__value summary__value--in">0000€</p>
+        <p class="summary__label">Out</p>
+        <p class="summary__value summary__value--out">0000€</p>
+        <p class="summary__label">Interest</p>
+        <p class="summary__value summary__value--interest">0000€</p>
+      </div>
+    </main>
+  </div>
 
   <!-- JS -->
   <script src="script.js"></script>

@@ -1,3 +1,13 @@
 {
-  "cSpell.words": ["accs", "Bankist", "hisham", "Schmedtmann"]
+  "cSpell.words": ["accs", "Bankist", "hisham", "Schmedtmann"],
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": false,
+    "yaml": false,
+    "javascript": false,
+    "html": false,
+    "css": false
+  }
 }
