@@ -6,42 +6,40 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
   font-family: "Courier New", Courier, monospace;
 }
 .welcome {
-  width: 500px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: left;
+  margin: 10px;
 }
-.content {
-  /* background-color: red; */
+.header {
+  /* border: 1px black solid; */
+}
+.app {
   opacity: 0;
-}
-/* NAV */
-nav {
-  /* background-color: antiquewhite; */
-  /* padding: 10px; */
+  /* border: 1px black solid; */
 }
 /* FORM */
-.login {
+.div-form {
+  border: 1px black solid;
+  border-radius: 6px;
+}
+.form {
   background-color: rgb(230, 209, 209);
   width: 500px;
-  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   border-radius: 6px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding: 0 10px;
+  margin-bottom: 5px;
+  padding: 10px 10px;
+}
+.transfer {
+  margin: 0;
 }
 /* Input */
 input {
-  padding: 5px;
+  padding: 8px;
   font-size: 14px;
   border-radius: 6px;
   border: none;
@@ -51,17 +49,39 @@ button {
   padding: 5px 10px;
   font-weight: bold;
 }
+
+h2,
+p {
+  margin: 5px;
+}
 /* BALANCE */
 .balance {
-  background-color: rgb(241, 227, 227);
+  background-color: rgb(240, 224, 224);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
-  margin-bottom: 10px;
+  padding: 0 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
   border-radius: 6px;
+  border: 1px black dotted;
 }
-
+.balance-info {
+  height: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* BALANCE VALUE*/
+.balance_value {
+  /* background-color: rgb(170, 170, 170); */
+  padding: 10px;
+  color: green;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 22px;
+}
 /* MOVEMENTS */
 .movements {
   background-color: rgb(230, 209, 209);
@@ -71,21 +91,14 @@ button {
   gap: 10px;
   padding: 10px;
   border-radius: 6px;
-}
-/* BALANCE */
-.balance_value {
-  background-color: rgb(13, 90, 90);
-  padding: 10px;
-  color: rgb(216, 169, 169);
-  border-radius: 10px;
-  font-weight: bold;
+  border: 1px black solid;
 }
 /* movements_row */
 .movements_row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 5px;
   background-color: white;
   border-radius: 6px;
 }
@@ -105,6 +118,13 @@ button {
 .withdraw {
   background-color: red;
 }
+.movements_details{
+  /* background-color: blue; */
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 /* SUMMARY */
 .summary {
   display: flex;
@@ -112,7 +132,8 @@ button {
   align-items: center;
   padding: 10px;
   background-color: rgb(228, 219, 219);
-  margin-top: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   border-radius: 6px;
   font-size: 18px;
   border: 1px solid black;

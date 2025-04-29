@@ -12,25 +12,33 @@
 <body>
   <div class="header">
     <h1 class="welcome">Log in to get started</h1>
-    <form action="" class="login">
-      <input class="inputUser" type="text" placeholder="user">
-      <input class="inputPin" type="text" placeholder="PIN" maxlength="4">
-      <button class="loginBtn">GO!</button>
-    </form>
+    <div class="div-form">
+      <form action="" class="form">
+        <input class="inputUser" type="text" placeholder="user">
+        <input class="inputPin" type="text" placeholder="PIN" maxlength="4">
+        <button class="loginBtn">GO!</button>
+      </form>
+      <!-- TRANSFER MONEY FORM  -->
+      <form class="transfer form">
+        <input class="transferTo" type="text" placeholder="Transfer To">
+        <input class="amount" type="number" placeholder="Amount">
+        <button class="transferBtn">➡️</button>
+      </form>
+    </div>
   </div>
 
-  <div class="content">
+  <div class="app">
     <!-- NAV -->
     <nav>
     </nav>
     <!-- MAIN -->
-    <main class="app">
+    <main>
       <!-- BALANCE -->
       <div class="balance">
-        <div>
+        <div class="balance-info">
           <h2 class="balance_label">Current balance</h2>
-          <p class="balance_Start at">As of:
-            <span class="Start at">2025-01-01 - 00:00</span>
+          <p class="balance_Start at">
+            <span>2025-01-01 - 00:00</span>
           </p>
         </div>
         <p class="balance_value">123</p>
@@ -40,7 +48,7 @@
         <div class="movements_row">
           <div class="movements_details">
             <div class="movements_type"></div>
-            <div class="movements_Start at">2025-01-01 - 00:00</div>
+            <div>2025-01-01</div>
           </div>
           <div class="movements_value">TEST</div>
         </div>
@@ -56,10 +64,9 @@
       </div>
     </main>
   </div>
-
   <!-- JS -->
   <script src="script.js"></script>
-  <script src="tmp.js"></script>
+  <!-- <script src="tmp.js"></script> -->
 </body>
 
 </html>
