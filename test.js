@@ -60,5 +60,30 @@ console.log(firstWithDrawal);
 const bankAccount = bankAccounts.find((acc) => acc.owner === "Jessica Davis");
 console.log(bankAccount);
 
+// findIndex
+// findLast
+console.log("------------------------");
+console.log(accounts[0].movements);
+const lastWithdrawal = accounts[0].movements.findLast((mov) => mov < 0);
+console.log(lastWithdrawal);
 
-// findIndex 
+// flat
+const arr = [[5, 1, 54, 4], [1, 5, 6, 78], 2, 5, 6];
+console.log(arr.flat());
+// const accountsMovements = bankAccounts.map((acc) => acc.movements);
+// console.log(accountsMovements);
+// const allMovements = accountsMovements.flat();
+// console.log(allMovements);
+// const overallBalance = allMovements.reduce((acc, mov) => acc + mov, 0);
+// console.log(overallBalance);
+const overallBalance = bankAccounts
+  .map((acc) => acc.movements)
+  .flat()
+  .reduce((acc, mov) => acc + mov, 0);
+console.log(overallBalance);
+
+// flatMap
+const overallBalance2 = bankAccounts
+  .flatMap((acc) => acc.movements)
+  .reduce((acc, mov) => acc + mov, 0);
+console.log(overallBalance2);
