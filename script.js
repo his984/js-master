@@ -45,6 +45,7 @@ const btnTransform = document.querySelector(".transferBtn");
 const closeAccBtn = document.querySelector(".closeAccBtn");
 const confirmUser = document.querySelector(".confirm-user");
 const confirmPIN = document.querySelector(".confirm-pin");
+const sortBtn = document.querySelector(".sortBtn");
 // #endregion
 
 // DisplayMovements
@@ -179,5 +180,18 @@ closeAccBtn.addEventListener("click", function (e) {
     welcomeMessage.textContent = "Log in to get started";
   }
   confirmPIN.value = confirmUser.value = "";
+});
+// -------------------------------------------------------
+// Sort movements
+let sorted = false;
+sortBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  const sortedMovs = sorted
+    ? currentAccount.movements
+    : currentAccount.movements.slice().sort((a, b) => a - b);
+
+  displayMovements(sortedMovs);
+  sorted = !sorted;
 });
 // -------------------------------------------------------

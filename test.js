@@ -87,3 +87,20 @@ const overallBalance2 = bankAccounts
   .flatMap((acc) => acc.movements)
   .reduce((acc, mov) => acc + mov, 0);
 console.log(overallBalance2);
+
+// sorting arrays
+// Strings
+const users = ["Adam", "Hisham", "Oscar", "Wissam"];
+console.log(users.sort());
+// Numbers
+// return < 0, if a is less than b (keep order)
+// return > 0, if a is greater than b (switch order)
+const numbers = [200, 450, -400, 3000, -650, -130, 70, 1300];
+numbers.sort(function (a, b) {
+  // if (a > b) return 1;
+  // if (a < b) return -1;
+  // return 0;
+  return a - b; // ascending order
+  // return b - a; // descending order
+});
+console.log(numbers);
