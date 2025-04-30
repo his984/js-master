@@ -59,3 +59,6 @@ const firstWithDrawal = bankAccounts[0].movements.find((mov) => mov < 0);
 console.log(firstWithDrawal);
 const bankAccount = bankAccounts.find((acc) => acc.owner === "Jessica Davis");
 console.log(bankAccount);
+
+
+// findIndex 

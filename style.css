@@ -11,17 +11,15 @@ body {
 .welcome {
   margin: 10px;
 }
-.header {
-  /* border: 1px black solid; */
-}
+
 .app {
   opacity: 0;
-  /* border: 1px black solid; */
 }
 /* FORM */
 .div-form {
-  border: 1px black solid;
-  border-radius: 6px;
+  border-radius: 10px;
+  padding: 10px 0;
+  background-color: rgb(230, 209, 209);
 }
 .form {
   background-color: rgb(230, 209, 209);
@@ -30,9 +28,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  border-radius: 6px;
-  margin-bottom: 5px;
-  padding: 10px 10px;
+  padding: 5px;
 }
 .transfer {
   margin: 0;
@@ -64,7 +60,7 @@ p {
   margin-bottom: 5px;
   margin-top: 5px;
   border-radius: 6px;
-  border: 1px black dotted;
+  /* border: 1px black dotted; */
 }
 .balance-info {
   height: 75px;
@@ -118,7 +114,7 @@ p {
 .withdraw {
   background-color: red;
 }
-.movements_details{
+.movements_details {
   /* background-color: blue; */
   width: 200px;
   display: flex;

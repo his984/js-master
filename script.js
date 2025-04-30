@@ -42,6 +42,9 @@ const app = document.querySelector(".app");
 const formInputTo = document.querySelector(".transferTo");
 const formInputAmount = document.querySelector(".amount");
 const btnTransform = document.querySelector(".transferBtn");
+const closeAccBtn = document.querySelector(".closeAccBtn");
+const confirmUser = document.querySelector(".confirm-user");
+const confirmPIN = document.querySelector(".confirm-pin");
 // #endregion
 
 // DisplayMovements
@@ -158,3 +161,23 @@ btnTransform.addEventListener("click", function (e) {
     updateUI(currentAccount);
   }
 });
+// -------------------------------------------------------
+// Close account
+closeAccBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  if (
+    confirmUser.value === currentAccount.userName &&
+    Number(confirmPIN.value) === currentAccount.pin
+  ) {
+    const index = accounts.findIndex(
+      (acc) => acc.userName === currentAccount.userName
+    );
+    // console.log(index);
+    accounts.splice(index, 1);
+    // Hide account details - RESET- UI
+    app.style.opacity = 0;
+    welcomeMessage.textContent = "Log in to get started";
+  }
+  confirmPIN.value = confirmUser.value = "";
+});
+// -------------------------------------------------------
