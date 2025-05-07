@@ -104,3 +104,11 @@ numbers.sort(function (a, b) {
   // return b - a; // descending order
 });
 console.log(numbers);
+
+// Array Grouping
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const groupedMovements = Object.groupBy(movements, (mov) => {
+  if (mov > 0) return "Deposit";
+  else return "Withdrawals";
+});
+console.log(groupedMovements);
